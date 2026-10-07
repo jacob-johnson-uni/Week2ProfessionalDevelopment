@@ -1,0 +1,40 @@
+Week 2: Handshake Problem
+
+Task 1:
+Each person should shake hands with every other person in the group. Each pair only shake hands once. Someone cannot shake hands with themselves.
+
+How many handshakes in a group of 10?
+
+A group of 10 people will shake hands 45 times. Found using the formula (10x9)/2.
+
+
+Task 2:
+Draw this problem as a graph with nodes and edges. (Found in Repository for this session)
+
+
+Task 3:
+Determine the general algorithm for this? Does your solution work for different numbers? It is important to be able to explain my determine solution.
+
+This problem can be worked out through: (n x n-1)/2. n is the number of people in the group, then that person will shake hands with 9 other people. This is then divided by 2 to remove the people shaking hands twice.
+
+
+Task 4:
+Program this algorithm within your comfortable programming language (C#)
+
+namespace HandshakeProblem
+{
+    class program
+    {
+        static void Main()
+        {
+            Console.Write("Enter the number of people in the group: ");
+            string numPeople = Console.ReadLine();
+            int people = Convert.ToInt32(numPeople);
+
+            int peopleminus = people - 1;
+            int numOfShakes = people * peopleminus / 2;
+
+            Console.WriteLine($"The number of shakes is: {numOfShakes}");
+        }
+    }
+}
